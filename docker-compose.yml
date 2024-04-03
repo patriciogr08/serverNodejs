@@ -1,0 +1,20 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sw-integration
+    ports:
+      - 90:81
+    container_name: integration-clients-tyt
+    networks:
+      - red-tyt
+    extra_hosts:
+      - "dsnerpprd.disan.com.co:190.216.203.177"
+    volumes:
+      - .:/App
+
+networks:
+  red-tyt:
+    driver: bridge

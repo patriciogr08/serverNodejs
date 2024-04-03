@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-soap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "concurrently \"npm run build:watch\" \"npm run start:dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "start:dev": "nodemon dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
+    "@types/mssql": "^9.1.5",
+    "@types/sax": "^1.2.5",
+    "concurrently": "^6.2.0",
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^7.2.0",
+    "express-validation": "^4.1.0",
+    "morgan": "^1.10.0",
+    "mssql": "^10.0.2",
+    "soap": "^1.0.0"
+  }
+}
